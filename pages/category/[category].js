@@ -23,7 +23,7 @@ const nightTheme = {
 }
 
 export default function Category(props) {
-  console.log(props)
+  // console.log(props)
   const [theme, setTheme] = useState('day');
   const [riseup, setRiseup] = useState();
 
@@ -40,7 +40,7 @@ export default function Category(props) {
   }
   useEffect(() => {
     setTheme(window.matchMedia('(prefers-color-scheme: dark)').matches ? "night" : "day")
-    console.log(props)
+    // console.log(props)
   }, []);
 
   return (
@@ -75,7 +75,7 @@ export default function Category(props) {
 export async function getStaticProps({ params: { category } }) {
   const res = await fetch(`${API_URL}/categories?Name=${category}`);
   const posts = await res.json();
-  console.log(posts[0].Posts)
+  // console.log(posts[0].Posts)
 
   const category_res = await fetch(`${API_URL}/categories`);
   const categories = await category_res.json();

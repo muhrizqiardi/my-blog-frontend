@@ -1,7 +1,7 @@
 import PostItem from "./PostItem";
 
 function PostList(props) {
-  console.log(props)
+  // console.log(props)
   return (
     <div className="post-list">
       { props.posts && props.posts.map((post) => (

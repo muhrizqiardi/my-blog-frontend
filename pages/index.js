@@ -23,7 +23,7 @@ const nightTheme = {
 }
 
 export default function Home(props) {
-  console.log(props)
+  // console.log(props)
   const [theme, setTheme] = useState('day');
   const [riseup, setRiseup] = useState();
 
@@ -40,7 +40,7 @@ export default function Home(props) {
   }
   useEffect(() => {
     setTheme(window.matchMedia('(prefers-color-scheme: dark)').matches ? "night" : "day")
-    console.log(theme)
+    // console.log(theme)
   }, []);
 
   return (

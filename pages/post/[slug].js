@@ -42,10 +42,10 @@ export default function PostContent(props) {
 
   useEffect(() => {
     setTheme(window.matchMedia('(prefers-color-scheme: dark)').matches ? "night" : "day")
-    console.log(theme)
+    // console.log(theme)
   }, []);
 
-  console.log(props.post.Thumbnail.formats.large.url)
+  // console.log(props.post.Thumbnail.formats.large.url)
   return (
     <ThemeProvider theme={theme === 'night' ? nightTheme : dayTheme}>
       <GlobalStyles />

@@ -15,7 +15,7 @@ export const useNightMode = () => {
   }
   useEffect(() => {
     setTheme(window.matchMedia('(prefers-color-scheme: dark)').matches ? "night" : "day")
-    console.log(theme)
+    // console.log(theme)
   }, []);
   return [theme, toggleTheme];
 }
