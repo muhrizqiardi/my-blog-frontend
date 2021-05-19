@@ -5,7 +5,7 @@ function Nav(props) {
     <nav>
       <ul>
         <li><Link href="/" passHref><a className={`${props.currentURL === "/" ? 'current' : ''}`} href="/">home</a></Link></li>
-        <li><Link href="/" passHref><a target="_blank" href="https://muhrizqiardi.github.io/">portfolio</a></Link></li>
+        <li><Link href="https://muhrizqiardi.github.io/" passHref><a target="_blank" href="https://muhrizqiardi.github.io/">portfolio</a></Link></li>
         {props.categories && props.categories.map((category) => <li><Link href={`/category/${category.Name}`} passHref><a className={`${props.currentURL === `/category/${category.Name}` ? 'current' : ''}`} href={`/category/${category.Name}`}>#{category.Name}</a></Link></li>)}
       </ul>
     </nav>
