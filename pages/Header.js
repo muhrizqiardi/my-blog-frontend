@@ -7,6 +7,21 @@ function Header(props) {
         <Head>
           <title>{props.title ? (props.title.slice(0, 45) + (props.title.length <= 45 ? " " : "...") + " | ") : ("")}muhrizqiardi's blog</title>
           <meta name="description" content={props.description ? props.description : "I'm Muhammad Rizqi Ardiansyah, and welcome to my blog! This is where I share my personal opinion, tips on life, and programming tutorials!"} />
+
+          {/* OpenGraph / Facebook Meta*/}
+          <meta property="og:type" content="website" />
+          {/* <meta property="og:url" content="https://metatags.io/" /> */}
+          <meta property="og:title" content={`${props.title ? (props.title.slice(0, 45) + (props.title.length <= 45 ? " " : "...") + " | ") : ("")}muhrizqiardi's blog`} />
+          <meta property="og:description" content={props.description ? props.description : "I'm Muhammad Rizqi Ardiansyah, and welcome to my blog! This is where I share my personal opinion, tips on life, and programming tutorials!"} />
+          <meta property="og:image" content="/LinkPreview.png" />
+
+          {/* Twitter Meta */}
+          <meta property="twitter:card" content="summary_large_image" />
+          {/* <meta property="twitter:url" content="https://metatags.io/" /> */}
+          <meta property="twitter:title" content={`${props.title ? (props.title.slice(0, 45) + (props.title.length <= 45 ? " " : "...") + " | ") : ("")}muhrizqiardi's blog`} />
+          <meta property="twitter:description" content={props.description ? props.description : "I'm Muhammad Rizqi Ardiansyah, and welcome to my blog! This is where I share my personal opinion, tips on life, and programming tutorials!"} />
+          <meta property="twitter:image" content="/LinkPreview.png" />
+
           <link rel="icon" href="/favicon/favicon.ico" />
 
           {/* Fonts */}
@@ -21,7 +36,7 @@ function Header(props) {
           </Link>
         </div>
         <div className="title">
-          <p className="blog-title">//muhrizqiardi blog</p>
+          <p className="blog-title">muhrizqiardi's blog</p>
           <p className="blog-subtitle">I'm Muhammad Rizqi Ardiansyah, and welcome to my blog! This is where I share my personal opinion, tips on life, and programming tutorials!</p>
         </div>
       </header>
