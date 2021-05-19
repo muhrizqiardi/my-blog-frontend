@@ -66,7 +66,7 @@ export default function PostContent(props) {
         <Nav categories={props.categories} />
         <main>
           <article className="post-full">
-            {props.post.Thumbnail && < img className="main" src={`${API_URL}` + props.post.Thumbnail.formats.large.url} alt={props.post.ImageAlt} />}
+            {props.post.Thumbnail && < img className="main" src={props.post.Thumbnail.formats.large.url} alt={props.post.ImageAlt} />}
             <h1>{props.post.Title}</h1>
             <span>By {props.post.User.username} at {new Date(Date.parse(props.post.updated_at)).toLocaleString()}, {props.post.Categories && props.post.Categories.map((category) => <a href={`/category/${category.Name}`}>#{category.Name} </a>)}</span>
             <div className="content">
