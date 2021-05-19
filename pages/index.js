@@ -73,7 +73,7 @@ export default function Home(props) {
 }
 
 export async function getStaticProps() {
-  const res = await fetch(`${API_URL}/posts?_sort=created_at:DESC`);
+  const res = await fetch(`${API_URL}/posts?_sort=createdAt:DESC`);
   const posts = await res.json();
 
   const category_res = await fetch(`${API_URL}/categories`);

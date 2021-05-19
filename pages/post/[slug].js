@@ -68,7 +68,7 @@ export default function PostContent(props) {
           <article className="post-full">
             {props.post.Thumbnail && < img className="main" src={props.post.Thumbnail.formats.large.url} alt={props.post.ImageAlt} />}
             <h1>{props.post.Title}</h1>
-            <span>By {props.post.User.username} at {new Date(Date.parse(props.post.updated_at)).toLocaleString()}, {props.post.Categories && props.post.Categories.map((category) => <a href={`/category/${category.Name}`}>#{category.Name} </a>)}</span>
+            <span>By {props.post.User.username} at {new Date(Date.parse(props.post.updatedAt)).toLocaleString()}, {props.post.Categories && props.post.Categories.map((category) => <a href={`/category/${category.Name}`}>#{category.Name} </a>)}</span>
             <div className="content">
               <ReactMarkdown plugins={[gfm]}>{props.post.Content}</ReactMarkdown>
             </div>

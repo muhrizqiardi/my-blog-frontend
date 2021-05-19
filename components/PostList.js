@@ -9,7 +9,7 @@ function PostList(props) {
           href={`/post/${post.slug}`}
           title={post.Title}
           author={post.User.username}
-          date={post.updated_at}
+          date={post.updatedAt}
           content={post.Snippet}
           categories={post.Categories}
         />
