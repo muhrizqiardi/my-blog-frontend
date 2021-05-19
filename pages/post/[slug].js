@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 
-import Header from '../Header'
+import Header from '../../components/Header'
 import Nav from '../Nav'
 
 import { ThemeProvider } from 'styled-components'
