@@ -198,6 +198,21 @@ nav {
 }
 
 main {
+  animation: slidein 0.5s ease-out;
+  @keyframes slidein {
+    from {
+      transform: translateX(-50%);
+      opacity: 0;
+    }
+    // 50% {
+    //   transform: translateX(-75%);
+    //   opacity: 0.75;
+    // }
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
   .post-list {
     .post-item {
       padding: 30px;

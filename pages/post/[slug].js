@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 
 import Header from '../../components/Header'
-import Nav from '../Nav'
+import Nav from '../../components/Nav'
 
 import { ThemeProvider } from 'styled-components'
 import { GlobalStyles } from '../../theme/global'

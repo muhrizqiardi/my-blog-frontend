@@ -1,8 +1,8 @@
 import { useEffect, useState } from 'react';
 
 import Header from '../components/Header'
-import Nav from './Nav'
-import PostList from './PostList'
+import Nav from '../components/Nav'
+import PostList from '../components/PostList'
 
 import { ThemeProvider } from 'styled-components';
 import { GlobalStyles } from '../theme/global';
