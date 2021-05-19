@@ -4,13 +4,25 @@ import Header from '../Header'
 import Nav from '../Nav'
 
 import { ThemeProvider } from 'styled-components'
-import { dayTheme, nightTheme } from '../theme.js'
-import { GlobalStyles } from '../global'
+import { GlobalStyles } from '../../theme/global'
 import { API_URL } from '../../utils/urls';
 
 import ReactMarkdown from 'react-markdown'
 import gfm from 'remark-gfm'
-import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter'
+
+const dayTheme = {
+  theme: "day",
+  body: '#f5f5f5',
+  text: '#141414',
+  toggleBorder: '#141414',
+}
+
+const nightTheme = {
+  theme: "night",
+  body: '#141414',
+  text: '#f5f5f5',
+  toggleBorder: '#f5f5f5',
+}
 
 export default function PostContent(props) {
   const [theme, setTheme] = useState('day');
@@ -51,7 +63,7 @@ export default function PostContent(props) {
           title={props.post.Title}
           description={props.post.Snippet}
         />
-        <Nav categories={props.categories}/>
+        <Nav categories={props.categories} />
         <main>
           <article className="post-full">
             <img className="main" src={`${API_URL}` + props.post.Thumbnail.formats.large.url} alt={props.post.ImageAlt} />

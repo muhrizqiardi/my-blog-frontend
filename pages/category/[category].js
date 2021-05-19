@@ -5,9 +5,22 @@ import Nav from '../Nav'
 import PostList from '../PostList'
 
 import { ThemeProvider } from 'styled-components';
-import { dayTheme, nightTheme } from '../theme.js';
-import { GlobalStyles } from '../global';
+import { GlobalStyles } from '../../theme/global';
 import { API_URL } from '../../utils/urls';
+
+const dayTheme = {
+  theme: "day",
+  body: '#f5f5f5',
+  text: '#141414',
+  toggleBorder: '#141414',
+}
+
+const nightTheme = {
+  theme: "night",
+  body: '#141414',
+  text: '#f5f5f5',
+  toggleBorder: '#f5f5f5',
+}
 
 export default function Category(props) {
   console.log(props)
@@ -44,10 +57,10 @@ export default function Category(props) {
           </div>
         </div>
         <Header />
-        <Nav 
-          categories={props.categories} 
+        <Nav
+          categories={props.categories}
           currentURL={'/category/' + props.currentCategory}
-          />
+        />
         <main>
           <PostList posts={props.posts} />
         </main>
