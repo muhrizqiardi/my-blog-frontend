@@ -10,18 +10,19 @@ function Header(props) {
 
           {/* OpenGraph / Facebook Meta*/}
           <meta property="og:type" content="website" />
-          {/* <meta property="og:url" content="https://metatags.io/" /> */}
+          <meta property="og:url" content="https://muhrizqiardi-blog.vercel.app/" />
           <meta property="og:title" content={`${props.title ? (props.title.slice(0, 45) + (props.title.length <= 45 ? " " : "...") + " | ") : ("")}muhrizqiardi's blog`} />
           <meta property="og:description" content={props.description ? props.description : "I'm Muhammad Rizqi Ardiansyah, and welcome to my blog! This is where I share my personal opinion, tips on life, and programming tutorials!"} />
-          <meta property="og:image" content="/LinkPreview.png" />
+          <meta property="og:image" content="https://muhrizqiardi-blog.vercel.app/LinkPreview.png" />
 
           {/* Twitter Meta */}
           <meta property="twitter:card" content="summary_large_image" />
-          {/* <meta property="twitter:url" content="https://metatags.io/" /> */}
+          <meta property="twitter:url" content="https://muhrizqiardi-blog.vercel.app/" />
           <meta property="twitter:title" content={`${props.title ? (props.title.slice(0, 45) + (props.title.length <= 45 ? " " : "...") + " | ") : ("")}muhrizqiardi's blog`} />
           <meta property="twitter:description" content={props.description ? props.description : "I'm Muhammad Rizqi Ardiansyah, and welcome to my blog! This is where I share my personal opinion, tips on life, and programming tutorials!"} />
-          <meta property="twitter:image" content="/LinkPreview.png" />
+          <meta property="twitter:image" content="https://muhrizqiardi-blog.vercel.app/LinkPreview.png" />
 
+          {/* Favicon */}
           <link rel="icon" href="/favicon/favicon.ico" />
 
           {/* Fonts */}
