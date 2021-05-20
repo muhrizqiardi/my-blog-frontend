@@ -201,7 +201,7 @@ main {
   animation: slidein 0.5s cubic-bezier(.01,.15,0,.85);
   @keyframes slidein {
     from {
-      transform: translateY(-50%);
+      transform: translateY(150%);
       opacity: 0;
     }
     // 50% {
