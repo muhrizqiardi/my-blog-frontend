@@ -198,7 +198,7 @@ nav {
 }
 
 main {
-  animation: slidein 0.5s ease-out;
+  animation: slidein 0.5s cubic-bezier(.01,.15,0,.85);
   @keyframes slidein {
     from {
       transform: translateX(-50%);
